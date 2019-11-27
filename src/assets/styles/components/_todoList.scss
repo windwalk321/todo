@@ -1,0 +1,82 @@
+.todo__list {
+  border-top: 1px solid $gray-lighten;
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list__item {
+  display: flex;
+  border-bottom: 1px solid $gray-lighten;
+  &:hover {
+    .remove {
+      opacity: 1;
+    }
+  }
+}
+.checkbox {
+  position: relative;
+  outline: 0;
+  align-self: center;
+  padding: 16px 9px;
+  margin: 0;
+  &::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin: 0;
+    border: 1px solid $gray-lighten;
+  }
+  &::after {
+    border-bottom: 3px solid $green-lighten;
+    border-right: 3px solid $green-lighten;
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    width: 10px;
+    opacity: 0;
+    height: 16px;
+    content: '';
+    display: block;
+    transition: .15s ease all;
+    transform: scale(.7, .7) rotate(45deg);
+  }
+  &:checked {
+    &::before {
+      border-color: $green-lighten;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+.label {
+  padding: 18px 10px 18px 18px;
+  font-size: 20px;
+  width: 100%;
+  word-break: break-all;
+}
+.completed {
+  text-decoration: line-through;
+  color: $gray-lighten;
+}
+.remove {
+  font-size: 26px;
+  padding: 15px 13px;
+  color: $red-lighten;
+  align-self: center;
+  cursor: default;
+  opacity: 0;
+  transition: .15s ease all;
+  &:hover {
+    color: $red-darken;
+  }
+}
+.edit {
+  margin-left: 60px;
+  padding: 15px 15px 15px 0;
+  width: 100%;
+  font-size: 20px;
+}

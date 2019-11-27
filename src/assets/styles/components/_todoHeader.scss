@@ -1,0 +1,31 @@
+.todo__header {
+  display: flex;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 17px 12px;
+  &::after {
+    border-bottom: 4px solid $gray-lighten;
+    border-right: 4px solid $gray-lighten;
+    width: 14px;
+    height: 14px;
+    content: '';
+    display: block;
+    transition: .15s ease all;
+    transform: scale(.7, .7) rotate(45deg);
+  }
+  &:checked {
+    &::after {
+      border-color: $gray-darken;
+    }
+  }
+}
+.input {
+  padding: 15px 15px 15px 60px;
+  width: 100%;
+  font-size: 20px;
+}
