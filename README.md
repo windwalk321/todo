@@ -1,8 +1,7 @@
-This project is a simple todo application inspired by [TodoMVC].
+This project is a simple todo application inspired by [TodoMVC]. Live [demo].
 
+[demo]: https://brave-hodgkin-3fa0f9.netlify.com
 [TodoMVC]: http://todomvc.com
-
-![](src/assets/todo-github.png)
 
 ## Features
   - Vue CLI 3
