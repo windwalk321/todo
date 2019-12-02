@@ -1,12 +1,15 @@
 <template>
   <div class="todo__header">
-    <input
-      class="checkbox"
-      type="checkbox"
-      @change="toggleAll"
-      :checked="!anyRemaining"
-      v-if="todoListLength"
-    >
+    <label class="label">
+      <input
+        class="checkbox"
+        type="checkbox"
+        @change="toggleAll"
+        :checked="!anyRemaining"
+        v-if="todoListLength"
+      >
+      <span class="check"></span>
+    </label>
     <input
       class="input"
       v-model="newTodo"

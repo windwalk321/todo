@@ -13,13 +13,16 @@ body {
   color: #4d4d4d;
 }
 input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  outline: 0;
-  margin: 0;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // -ms-appearance: none;
+  // -o-appearance: none;
+  // appearance: none;
+  // outline: 0;
+  // margin: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 input[type="text"] {
   outline: 0;

@@ -2,12 +2,15 @@
   <ul class="todo__list">
     <li class="list__item" v-for="todo in todoListFilter" :key="todo.id">
       <template v-if="!editing">
-        <input
-          type="checkbox"
-          class="checkbox"
-          v-model="todo.completed"
-          @change="doneEdit(todo)"
-        >
+        <label class="labelCheck">
+          <input
+            type="checkbox"
+            class="checkbox"
+            v-model="todo.completed"
+            @change="doneEdit(todo)"
+          >
+          <span class="check"></span>
+        </label>
         <span
           class="label"
           :class="{ completed: todo.completed }"
