@@ -1,6 +1,5 @@
-This project is a simple todo application inspired by [TodoMVC]. Live [demo].
+This project is a simple todo application inspired by [TodoMVC].
 
-[demo]: https://brave-hodgkin-3fa0f9.netlify.com
 [TodoMVC]: http://todomvc.com
 
 ## Project setup
