@@ -1,20 +1,24 @@
 <template>
-  <div id="app" class="app">
-    <index />
+  <div id="app">
+    <div class="sidebar">
+      <ul class="sidebar__list">
+        <li class="sidebar__item">item</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import Index from './views/Index.vue'
 
 export default {
-  name: 'app',
-  components: {
-    Index
-  }
+  name: 'app'
 }
 </script>
 
 <style lang="scss">
-@import "./assets/styles/basics/_base.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+#app {
+  font-family: 'Roboto';
+}
 </style>
