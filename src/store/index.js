@@ -11,17 +11,17 @@ export default new Vuex.Store({
       {
         id: 1,
         title: 'First folder',
-        color: '#42B883'
+        color: 'pink'
       },
       {
         id: 2,
         title: 'Second folder',
-        color: '#64C4ED'
+        color: 'lime'
       },
       {
         id: 3,
         title: 'Third folder',
-        color: '#FFBBCC'
+        color: 'green'
       }
     ],
     items: [
