@@ -11,20 +11,20 @@ export default new Vuex.Store({
       {
         id: 1,
         title: 'First folder',
-        color: 'pink'
+        color: '#b6e6bd'
       },
       {
         id: 2,
         title: 'Second folder',
-        color: 'lime'
+        color: '#c355f5'
       },
       {
         id: 3,
         title: 'Third folder',
-        color: 'green'
+        color: '#ffbbcc'
       }
     ],
-    items: [
+    todos: [
       {
         id: 1,
         title: 'First item',
@@ -39,7 +39,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        title: 'Third item',
+        title: 'Third item Third item Third item Third item Third itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird itemThird item',
         parent: 2,
         completed: true
       },
