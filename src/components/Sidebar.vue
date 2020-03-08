@@ -21,7 +21,7 @@
         v-for="folder in folders"
         :key="folder.id"
       >
-        <i class="item__icon" :class="`item__icon--${folder.color}`"></i>
+        <i class="item__icon" :style="{'background-color': folder.color}"></i>
         <span class="item__title">{{ folder.title }}</span>
       </li>
     </ul>
@@ -64,10 +64,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .sidebar {
-  width: 200px;
-  padding: 60px 20px;
+  flex: 0 0 200px;
+  padding: 30px 10px;
   &__list {
     margin-bottom: 20px;
   }
@@ -84,30 +84,6 @@ export default {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    &--grey {
-      background-color: #c9d1d3;
-    }
-    &--lime {
-      background-color: #b6e6bd;
-    }
-    &--purple {
-      background-color: #c355f5;
-    }
-    &--black {
-      background-color: #08001a;
-    }
-    &--red {
-      background-color: #ff6464;
-    }
-    &--green {
-      background-color: #42b883;
-    }
-    &--blue {
-      background-color: #64c4ed;
-    }
-    &--pink {
-      background-color: #ffbbcc;
-    }
   }
   &__button {
     font-size: 14px;
