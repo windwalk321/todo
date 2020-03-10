@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <ul class="home__folders">
-      <folder
+      <folder-item
         v-for="folder in folders"
         :key="folder.id"
         :folder="folder"
@@ -12,22 +12,15 @@
 
 <script>
 import { mapState } from 'vuex'
-import Folder from '../components/Folder'
+import FolderItem from '../components/FolderItem'
 
 export default {
   name: 'Home',
   components: {
-    Folder
+    FolderItem
   },
   computed: {
     ...mapState(['folders', 'todos'])
   }
 }
 </script>
-
-<style lang="scss">
-.home {
-  background: #ffffff;
-  width: 100%;
-}
-</style>

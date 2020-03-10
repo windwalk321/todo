@@ -10,7 +10,7 @@ export default new Vuex.Store({
     folders: [
       {
         id: 1,
-        title: 'First folder',
+        title: 'First folder folder first folder folderfolderfolderfolder',
         color: '#b6e6bd'
       },
       {
@@ -21,6 +21,11 @@ export default new Vuex.Store({
       {
         id: 3,
         title: 'Third folder',
+        color: '#ffbbcc'
+      },
+      {
+        id: Date.now(),
+        title: 'Fourth folder',
         color: '#ffbbcc'
       }
     ],
