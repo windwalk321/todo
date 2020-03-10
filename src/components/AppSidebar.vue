@@ -1,7 +1,11 @@
 <template>
   <div class="sidebar">
     <ul class="sidebar__list">
-      <li class="sidebar__item">
+      <router-link
+        class="sidebar__item"
+        tag="li"
+        to="/"
+      >
         <svg
           width="18"
           height="18"
@@ -15,15 +19,17 @@
           />
         </svg>
         <span class="item__title">Все задачи</span>
-      </li>
-      <li
+      </router-link>
+      <router-link
         class="sidebar__item"
         v-for="folder in folders"
         :key="folder.id"
+        tag="li"
+        :to="`/folder/${folder.id}`"
       >
         <i class="item__icon" :style="{'background-color': folder.color}"></i>
         <span class="item__title">{{ folder.title }}</span>
-      </li>
+      </router-link>
     </ul>
     <button class="button sidebar__button">
       <svg
@@ -57,7 +63,7 @@
 import { mapState } from 'vuex'
 
 export default {
-  name: 'Sidebar',
+  name: 'AppSidebar',
   computed: {
     ...mapState(['folders'])
   }
@@ -73,15 +79,25 @@ export default {
   }
   &__item {
     padding: 8px 4px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
+    border-radius: 4px;
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    }
   }
   .item__title {
     margin-left: 5px;
+    width: 160px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .item__icon {
-    display: inline-block;
-    width: 10px;
+    flex: 0 0 10px;
     height: 10px;
     border-radius: 50%;
   }
@@ -95,5 +111,8 @@ export default {
     }
   }
 }
-
+.router-link-exact-active {
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
 </style>
