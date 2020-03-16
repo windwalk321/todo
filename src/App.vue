@@ -19,6 +19,9 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
 
+* {
+  box-sizing: border-box;
+}
 html {
   width:100vw;
   overflow-x:hidden;
@@ -37,6 +40,7 @@ body {
 .button {
   font-family: 'Lato', sans-serif;
   border: 0;
+  outline: 0;
   font-weight: 600;
   display: flex;
   align-items: center;

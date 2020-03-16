@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss">
 .todo {
-  margin-top: 5px;
+  margin-top: 14px;
   display: flex;
   align-items: center;
   &:hover {
@@ -120,8 +120,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     color: lighten(#f4f6f8, 2%);
     cursor: pointer;
     &:hover {

@@ -31,39 +31,19 @@
         <span class="item__title">{{ folder.title }}</span>
       </router-link>
     </ul>
-    <button class="button sidebar__button">
-      <svg
-        width="12"
-        height="12"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8 1V15"
-          stroke="black"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M1 8H15"
-          stroke="black"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span class="button__title">Добавить папку</span>
-    </button>
+    <add-folder />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import AddFolder from './AddFolder'
 
 export default {
   name: 'AppSidebar',
+  components: {
+    AddFolder
+  },
   computed: {
     ...mapState(['folders'])
   }
@@ -72,6 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
+  position: relative;
   flex: 0 0 200px;
   padding: 30px 10px;
   &__list {
@@ -100,15 +81,6 @@ export default {
     flex: 0 0 10px;
     height: 10px;
     border-radius: 50%;
-  }
-  &__button {
-    font-size: 14px;
-    color: #767676;
-    letter-spacing: 0.15px;
-    padding: 8px 4px;
-    .button__title {
-      margin-left: 5px;
-    }
   }
 }
 .router-link-exact-active {
