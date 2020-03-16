@@ -89,13 +89,15 @@ export default {
       this.selectedColor = color
     },
     addFolder () {
-      this.ADD_FOLDER({
-        id: Date.now(),
-        title: this.title,
-        color: this.selectedColor
-      })
-      this.isCreating = false
-      this.title = ''
+      if (this.title.length !== 0) {
+        this.ADD_FOLDER({
+          id: Date.now(),
+          title: this.title,
+          color: this.selectedColor
+        })
+        this.isCreating = false
+        this.title = ''
+      }
     }
   }
 }
