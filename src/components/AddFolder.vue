@@ -31,7 +31,7 @@
         type="text"
         placeholder="Название папки"
         class="popup__input"
-        v-model="title"
+        v-model.trim="title"
       >
       <div class="popup__colors">
         <i
@@ -95,6 +95,7 @@ export default {
         color: this.selectedColor
       })
       this.isCreating = false
+      this.title = ''
     }
   }
 }

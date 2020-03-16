@@ -50,11 +50,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .sidebar {
   position: relative;
-  flex: 0 0 200px;
-  padding: 30px 10px;
+  width: 200px;
+  padding: 30px 20px;
   &__list {
     margin-bottom: 20px;
   }
