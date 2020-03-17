@@ -7,5 +7,8 @@ export default {
   },
   toggleTodo ({ commit }, todo) {
     commit('TOGGLE_TODO', { todo, completed: !todo.completed })
+  },
+  removeTodo ({ commit }, id) {
+    commit('REMOVE_TODO', id)
   }
 }

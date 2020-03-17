@@ -8,5 +8,9 @@ export default {
   },
   TOGGLE_TODO (state, { todo, completed = todo.completed }) {
     todo.completed = !completed
+  },
+  REMOVE_TODO (state, id) {
+    const index = state.todos.findIndex(item => item.id === id)
+    state.todos.splice(index, 1)
   }
 }

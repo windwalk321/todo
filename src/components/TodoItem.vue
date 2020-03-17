@@ -27,7 +27,7 @@
     </div>
     <span class="todo__title">{{ todo.title }}</span>
     <template v-if="isEditable">
-      <span class="todo__remove">
+      <span class="todo__remove" @click="removeTodo(todo.id)">
         <svg
           width="11"
           height="11"
@@ -55,7 +55,7 @@ export default {
     todo: Object
   },
   methods: {
-    ...mapActions(['toggleTodo'])
+    ...mapActions(['toggleTodo', 'removeTodo'])
   }
 }
 </script>
