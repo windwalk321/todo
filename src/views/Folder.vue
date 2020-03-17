@@ -18,7 +18,7 @@
       </span>
     </div>
     <ul class="folder__todos">
-      <todo-item :isEditable="true" v-for="todo in items" :key="todo.id" :todo="todo"/>
+      <todo-item v-for="todo in items" :key="todo.id" :isEditable="true" :todo="todo"/>
     </ul>
   </div>
 </template>

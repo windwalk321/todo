@@ -1,8 +1,13 @@
 <template>
   <li class="todo">
     <div class="todo__checkbox">
-      <input v-model="todo.completed" type="checkbox" id="checkbox">
-      <label for="checkbox">
+      <input
+        type="checkbox"
+        :id="todo.id"
+        v-model="todo.completed"
+        @change="toggleTodo(todo)"
+      >
+      <label :for="todo.id">
         <svg
           width="11"
           height="8"
@@ -41,18 +46,24 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'TodoItem',
   props: {
-    todo: Object,
-    isEditable: Boolean
+    isEditable: Boolean,
+    todo: Object
+  },
+  methods: {
+    ...mapActions(['toggleTodo'])
   }
 }
 </script>
 
 <style lang="scss">
 .todo {
-  margin-top: 5px;
+  margin-top: 14px;
+  height: 24px;
   display: flex;
   align-items: center;
   &:hover {
@@ -120,8 +131,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     color: lighten(#f4f6f8, 2%);
     cursor: pointer;
     &:hover {

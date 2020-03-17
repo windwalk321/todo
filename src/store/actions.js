@@ -4,5 +4,8 @@ export default {
   },
   removeFolder ({ commit }, id) {
     commit('REMOVE_FOLDER', id)
+  },
+  toggleTodo ({ commit }, todo) {
+    commit('TOGGLE_TODO', { todo, completed: !todo.completed })
   }
 }
