@@ -42,7 +42,7 @@
           :class="{ active: selectedColor === color}"
         ></i>
       </div>
-      <button @click="addFolder" class="button popup__button">Добавить</button>
+      <button @click="addItem" class="button popup__button">Добавить</button>
       <div @click="isCreating = false" class="popup__close">
         <svg
           width="10"
@@ -88,7 +88,7 @@ export default {
     selectColor (color) {
       this.selectedColor = color
     },
-    addFolder () {
+    addItem () {
       if (this.title.length !== 0) {
         this.addFolder({
           id: Date.now(),
