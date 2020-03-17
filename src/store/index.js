@@ -15,7 +15,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        title: 'Second folder',
+        title: 'Second foldereds',
         color: '#c355f5'
       },
       {

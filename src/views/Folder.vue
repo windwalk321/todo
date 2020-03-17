@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="folder"
-  >
-    <div class="folder__title">
+  <div class="folder" v-if="folder">
+    <div  class="folder__title">
       <h4 :style="{color: folder.color}">{{ folder.title }}</h4>
       <span>
         <svg

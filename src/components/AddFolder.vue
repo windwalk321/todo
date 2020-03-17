@@ -84,13 +84,13 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['ADD_FOLDER']),
+    ...mapActions(['addFolder']),
     selectColor (color) {
       this.selectedColor = color
     },
     addFolder () {
       if (this.title.length !== 0) {
-        this.ADD_FOLDER({
+        this.addFolder({
           id: Date.now(),
           title: this.title,
           color: this.selectedColor
