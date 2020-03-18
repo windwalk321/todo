@@ -132,7 +132,7 @@ export default {
       font-size: 14px;
       padding: 8px 11px;
       outline: 0;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Roboto', sans-serif;
       &::placeholder {
         font-weight: 600;
         color: #C7C7C7;

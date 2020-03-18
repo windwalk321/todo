@@ -12,5 +12,8 @@ export default {
   REMOVE_TODO (state, id) {
     const index = state.todos.findIndex(item => item.id === id)
     state.todos.splice(index, 1)
+  },
+  EDIT_TODO (state, { todo, title = todo.title }) {
+    todo.title = title
   }
 }
