@@ -15,5 +15,8 @@ export default {
   },
   EDIT_TODO (state, { todo, title = todo.title }) {
     todo.title = title
+  },
+  ADD_TODO (state, todo) {
+    state.todos.push(todo)
   }
 }

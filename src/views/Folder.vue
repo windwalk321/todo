@@ -19,27 +19,36 @@
     </div>
     <ul class="folder__todos">
       <todo-item v-for="todo in items" :key="todo.id" :isEditable="true" :todo="todo"/>
+      <li>
+        <add-todo />
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+
 import TodoItem from '../components/TodoItem'
+import AddTodo from '../components/AddTodo'
 
 export default {
   name: 'Folder',
   components: {
-    TodoItem
+    TodoItem,
+    AddTodo
   },
   computed: {
     ...mapState(['folders', 'todos']),
+
     id () {
       return parseInt(this.$route.params.id)
     },
+
     folder () {
       return this.folders.find(item => item.id === this.id)
     },
+
     items () {
       return this.todos.filter(item => item.parent === this.id)
     }

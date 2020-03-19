@@ -13,5 +13,8 @@ export default {
   },
   editTodo ({ commit }, todo) {
     commit('EDIT_TODO', { todo, title: todo.title })
+  },
+  addTodo ({ commit }, todo) {
+    commit('ADD_TODO', todo)
   }
 }
