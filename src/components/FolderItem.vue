@@ -5,9 +5,10 @@
     <div class="folder__title">
       <h4 :style="{color: folder.color}">{{ folder.title }}</h4>
     </div>
-    <ul class="folder__todos">
+    <ul v-if="items.length" class="folder__todos">
       <todo-item v-for="todo in items" :key="todo.id" :todo="todo"/>
     </ul>
+    <span v-else class="folder__notification">Задачи отсутствуют</span>
   </li>
 </template>
 
@@ -51,6 +52,11 @@ export default {
       width: 100%;
       font-family: 'Lato', sans-serif;
     }
+  }
+  &__notification {
+    font-family: 'Lato', sans-serif;
+    margin-top: 14px;
+    color: #C9D1D3;
   }
 }
 </style>

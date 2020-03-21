@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <ul v-if="folders" class="home__folders">
+    <ul v-if="folders.length" class="home__folders">
       <folder-item
         v-for="folder in folders"
         :key="folder.id"
         :folder="folder"
       />
     </ul>
-    <h4 class="home__title">Задачи отсутствуют</h4>
+    <h4 v-else class="home__title">Задачи отсутствуют</h4>
   </div>
 </template>
 

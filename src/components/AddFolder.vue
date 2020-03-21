@@ -117,6 +117,7 @@ export default {
   .popup {
     left: 80px;
     height: 150px;
+    z-index: 999;
     width: 240px;
     display: block;
     background: #ffffff;
