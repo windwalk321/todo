@@ -29,7 +29,7 @@
       >
         <i class="item__icon" :style="{'background-color': folder.color}"></i>
         <span class="item__title">{{ folder.title }}</span>
-        <span @click="removeFolder(folder.id)" class="item__remove">
+        <span @click="remove(folder.id)" class="item__remove">
           <svg
             width="11"
             height="11"
@@ -59,10 +59,18 @@ export default {
     AddFolder
   },
   computed: {
-    ...mapState(['folders'])
+    ...mapState(['folders', 'todos'])
   },
   methods: {
-    ...mapActions(['removeFolder'])
+    ...mapActions(['removeFolder', 'removeTodo']),
+    remove (folderId) {
+      const items = this.todos.filter(item => item.parent === folderId)
+
+      this.removeFolder(folderId)
+      items.forEach(item => {
+        this.removeTodo(item)
+      })
+    }
   }
 }
 </script>
