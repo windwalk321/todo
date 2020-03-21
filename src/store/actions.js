@@ -11,8 +11,8 @@ export default {
   removeTodo ({ commit }, id) {
     commit('REMOVE_TODO', id)
   },
-  editTodo ({ commit }, todo) {
-    commit('EDIT_TODO', { todo, title: todo.title })
+  editItem ({ commit }, item) {
+    commit('EDIT_ITEM', { item, title: item.title })
   },
   addTodo ({ commit }, todo) {
     commit('ADD_TODO', todo)

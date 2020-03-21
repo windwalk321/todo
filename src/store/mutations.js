@@ -13,8 +13,8 @@ export default {
     const index = state.todos.findIndex(item => item.id === id)
     state.todos.splice(index, 1)
   },
-  EDIT_TODO (state, { todo, title = todo.title }) {
-    todo.title = title
+  EDIT_ITEM (state, { item, title = item.title }) {
+    item.title = title
   },
   ADD_TODO (state, todo) {
     state.todos.push(todo)
