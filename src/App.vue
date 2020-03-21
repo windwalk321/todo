@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <app-sidebar />
     <router-view />
   </div>
@@ -29,15 +29,14 @@ html {
 body {
   background: #E5E5E5;
 }
-#app {
+.app {
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
   background: #F4F6F8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
-  height: calc(100vh - 100px);
-  width: calc(100vw - 30px);
-  overflow: auto;
+  height: 100%;
+  width: 800px;
 }
 .button {
   font-family: 'Lato', sans-serif;

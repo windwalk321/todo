@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 .add-todo {
-  margin-top: 10px;
+  margin-top: 14px;
   .initial-button {
     padding: 0;
     color: #B4B4B4;

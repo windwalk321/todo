@@ -121,10 +121,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .todo {
-  margin-top: 14px;
-  height: 24px;
+  margin: 14px 0 0 0;
   display: flex;
   align-items: center;
   &:hover {
@@ -136,7 +135,8 @@ export default {
     width: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    line-height: 20px;
+    padding: 0;
+    line-height: 24px;
     border: 0;
     outline: 0;
     padding-left: 30px;
@@ -155,7 +155,6 @@ export default {
     input:checked + label {
       background-color: #4dd599;
       border-color: #4dd599;
-
       svg {
         opacity: 1;
         path {
@@ -194,6 +193,7 @@ export default {
   &__title {
     width: 100%;
     word-break: break-all;
+    line-height: 24px;
   }
   &__actions {
     display: flex;
@@ -207,18 +207,18 @@ export default {
     height: 24px;
     color: lighten(#f4f6f8, 2%);
     cursor: pointer;
-    &:hover {
-      color: darken(#f4f6f8, 2%);
+      &:hover {
+        color: darken(#f4f6f8, 2%);
+        svg {
+          opacity: 0.9;
+        }
+      }
       svg {
-        opacity: 0.9;
+        width: 11px;
+        height: 11px;
+        opacity: 0.4;
       }
     }
-    svg {
-      width: 11px;
-      height: 11px;
-      opacity: 0.4;
-    }
-  }
   }
 }
 </style>

@@ -67,7 +67,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .sidebar {
   position: relative;
   width: 200px;

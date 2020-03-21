@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .folder {
   display: flex;
   flex-direction: column;
@@ -42,12 +42,11 @@ export default {
     padding: 30px;
   }
   &__title {
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
+    font-size: 32px;
+    padding: 0 0 20px 0;
     border-bottom: 1px solid #f2f2f2;
     h4 {
-      font-size: 32px;
+      line-height: 41px;
       font-weight: bold;
       width: 100%;
       font-family: 'Lato', sans-serif;

@@ -103,7 +103,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .add-folder {
   .initial-button {
     font-size: 14px;

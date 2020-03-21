@@ -103,9 +103,12 @@ export default {
 
 <style lang="scss" scoped>
 .folder {
+  padding: 30px;
+  background: #ffffff;
   width: 100%;
   &__title {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 0 20px 0;
     border-bottom: 1px solid #f2f2f2;
@@ -115,6 +118,9 @@ export default {
       }
     }
     h4 {
+      font-size: 32px;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
       line-height: 41px;
     }
     input {
@@ -149,7 +155,8 @@ export default {
     }
   }
   &__todos {
-    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
