@@ -1,7 +1,3 @@
-This project is a simple todo application inspired by [TodoMVC].
-
-[TodoMVC]: http://todomvc.com
-
 ## Project setup
 ```
 yarn install
