@@ -18,5 +18,10 @@ export default {
   },
   ADD_TODO (state, todo) {
     state.todos.push(todo)
+  },
+  INITIAL_STORE (state) {
+    if (localStorage.getItem('store')) {
+      this.replaceState(Object.assign(state, JSON.parse(localStorage.getItem('store'))))
+    }
   }
 }

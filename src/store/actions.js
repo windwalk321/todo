@@ -16,5 +16,8 @@ export default {
   },
   addTodo ({ commit }, todo) {
     commit('ADD_TODO', todo)
+  },
+  initialStore ({ commit }) {
+    commit('INITIAL_STORE')
   }
 }

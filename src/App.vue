@@ -13,6 +13,10 @@ export default {
 
   components: {
     AppSidebar
+  },
+
+  mounted: function () {
+    this.$store.dispatch('initialStore')
   }
 }
 </script>

@@ -24,5 +24,10 @@ export default new Vuex.Store({
     ]
   },
   mutations,
-  actions
+  actions,
+  plugins: [store => {
+    store.subscribe((mutation, state) => {
+      localStorage.setItem('store', JSON.stringify(state))
+    })
+  }]
 })
