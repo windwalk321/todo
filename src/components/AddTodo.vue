@@ -49,12 +49,14 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'AddTodo',
+
   data: function () {
     return {
       isCreating: false,
       title: ''
     }
   },
+
   methods: {
     ...mapActions(['addTodo']),
 
@@ -81,6 +83,7 @@ export default {
     padding: 0;
     color: #B4B4B4;
     font-size: 16px;
+    letter-spacing: .3px;
     font-weight: normal;
     span {
       margin-left: 10px;
