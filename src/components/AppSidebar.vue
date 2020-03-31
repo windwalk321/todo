@@ -55,12 +55,15 @@ import AddFolder from './AddFolder'
 
 export default {
   name: 'AppSidebar',
+
   components: {
     AddFolder
   },
+
   computed: {
     ...mapState(['folders', 'todos'])
   },
+
   methods: {
     ...mapActions(['removeFolder', 'removeTodo']),
     remove (folderId) {
@@ -92,7 +95,7 @@ export default {
     &:hover {
       cursor: pointer;
       background-color: #fff;
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
       .item__remove {
         opacity: 1;
       }
@@ -135,6 +138,6 @@ export default {
 }
 .router-link-exact-active {
   background-color: #fff;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
 }
 </style>
