@@ -79,26 +79,31 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'TodoItem',
+
   props: {
     isEditable: Boolean,
     todo: Object
   },
+
   data: function () {
     return {
       editing: false,
       beforeEditValue: ''
     }
   },
+
   methods: {
     ...mapActions([
       'toggleTodo',
       'removeTodo',
       'editItem'
     ]),
+
     edit (todo) {
       this.beforeEditValue = todo.title
       this.editing = true
     },
+
     editDone (e) {
       const value = e.target.value.trim()
       const { todo } = this
@@ -113,6 +118,7 @@ export default {
       }
       this.editing = false
     },
+
     editClose (todo) {
       todo.title = this.beforeEditValue
       this.editing = false
@@ -140,6 +146,7 @@ export default {
     border: 0;
     outline: 0;
     padding-left: 30px;
+    letter-spacing: .15px;
   }
   &__checkbox {
     margin-right: 10px;
@@ -194,6 +201,7 @@ export default {
     width: 100%;
     word-break: break-all;
     line-height: 24px;
+    letter-spacing: .15px;
   }
   &__actions {
     display: flex;

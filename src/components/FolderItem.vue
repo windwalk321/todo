@@ -18,12 +18,15 @@ import TodoItem from './TodoItem'
 
 export default {
   name: 'FolderItem',
+
   components: {
     TodoItem
   },
+
   props: {
     folder: Object
   },
+
   computed: {
     ...mapState(['todos']),
     items () {
@@ -56,6 +59,7 @@ export default {
   &__notification {
     font-family: 'Lato', sans-serif;
     margin-top: 14px;
+    letter-spacing: .3px;
     color: #C9D1D3;
   }
 }
