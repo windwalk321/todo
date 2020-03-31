@@ -29,6 +29,7 @@ export default {
 
   computed: {
     ...mapState(['todos']),
+
     items () {
       return this.todos.filter(item => item.parent === this.folder.id)
     }
