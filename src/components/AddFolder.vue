@@ -66,6 +66,7 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'AddFolder',
+
   data: function () {
     return {
       isCreating: false,
@@ -83,11 +84,14 @@ export default {
       ]
     }
   },
+
   methods: {
     ...mapActions(['addFolder']),
+
     selectColor (color) {
       this.selectedColor = color
     },
+
     addItem () {
       if (this.title.length !== 0) {
         this.addFolder({
@@ -135,7 +139,6 @@ export default {
       outline: 0;
       font-family: 'Roboto', sans-serif;
       &::placeholder {
-        font-weight: 600;
         color: #C7C7C7;
         letter-spacing: 0.15px;
       }
