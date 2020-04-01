@@ -145,7 +145,6 @@ export default {
       outline: 0;
     }
     span {
-      opacity: 0;
       transition: opacity 0.15s ease-in-out;
       display: flex;
       align-items: center;

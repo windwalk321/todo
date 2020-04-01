@@ -114,7 +114,6 @@ export default {
     border-radius: 50%;
   }
   .item__remove {
-    opacity: 0;
     transition: opacity 0.15s ease-in-out;
     display: flex;
     align-items: center;

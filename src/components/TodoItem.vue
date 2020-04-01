@@ -206,7 +206,6 @@ export default {
   &__actions {
     display: flex;
     span {
-    opacity: 0;
     transition: opacity 0.15s ease-in-out;
     display: flex;
     align-items: center;
