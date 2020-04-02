@@ -44,7 +44,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   min-height: 500px;
-  width: 800px;
+  max-width: 800px;
 }
 
 .button {
